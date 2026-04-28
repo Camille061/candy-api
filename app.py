@@ -1,16 +1,3 @@
-# from flask import Flask, jsonify
-
-# app = Flask(__name__)
-
-# @app.route("/servers")
-# def servers():
-#     return jsonify({
-#         "servers": 69
-#     })
-
-# if __name__ == "__main__":
-#     app.run(host="0.0.0.0", port=5000)
-
 from flask import Flask, jsonify, request
 
 app = Flask(__name__)
@@ -31,3 +18,6 @@ def update():
     stats["servers"] = data.get("servers", 0)
     stats["users"] = data.get("users", 0)
     return jsonify({"ok": True})
+
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", port=5000)
