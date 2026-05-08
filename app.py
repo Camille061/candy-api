@@ -5,7 +5,7 @@ app = Flask(__name__)
 
 CORS(app, resources={r"/*": {"origins": "*"}})
 
-stats = {"servers": 81, "users": 3076}
+stats = {"servers": 100, "users": 3413}
 
 @app.after_request
 def add_cors(response):
